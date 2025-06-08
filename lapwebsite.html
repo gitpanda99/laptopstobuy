@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Laptops to Buy in 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for gradients and font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000; /* Pure black background */
+        }
+        /* New premium gold/amber gradient */
+        .text-gradient-gold-amber {
+            background: linear-gradient(to right, #FFD700, #FFA500); /* Gold to Orange */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* New premium blue gradient */
+        .text-gradient-deep-blue {
+            background: linear-gradient(to right, #4A90E2, #2A64B6); /* Deeper Blue */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Styling for laptop sections and their animated content */
+        .laptop-section {
+            background-color: #1A1A1A; /* Slightly lighter black for sections */
+            border-radius: 1rem; /* More rounded corners */
+            /* Enhanced shadow for a more premium feel */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+            padding: 3rem; /* Significantly increased padding for more space */
+            margin-bottom: 4rem; /* Increased margin for more separation */
+            overflow: hidden; /* Ensures content doesn't spill during animation */
+            cursor: pointer; /* Indicate interactivity */
+            width: 100%; /* Ensure sections take full width of their container */
+            max-width: 900px; /* Limit max width for better readability on very wide screens */
+        }
+
+        .laptop-details {
+            opacity: 0;
+            max-height: 0; /* Initially collapse the space */
+            overflow: hidden;
+            transform: translateY(20px); /* Start slightly below */
+            /* Smoother and slightly longer animation for all properties */
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out, max-height 0.6s ease-in-out;
+            transition-delay: 0.1s; /* Slight delay for a staggered effect */
+        }
+
+        /* Show laptop details on hover */
+        .laptop-section:hover .laptop-details {
+            opacity: 1;
+            max-height: 500px; /* A large enough value to accommodate content */
+            transform: translateY(0);
+        }
+
+        /* Responsive image sizing within sections */
+        .laptop-image {
+            width: 100%;
+            height: 300px; /* Increased height for prominence */
+            object-fit: cover;
+            border-radius: 0.75rem; /* More rounded image corners */
+            margin-bottom: 2rem; /* Increased bottom margin for more space */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .laptop-image {
+                width: 350px; /* Increased fixed width on larger screens */
+                height: 300px;
+                margin-bottom: 0; /* Remove bottom margin when next to text */
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-100 antialiased">
+
+    <header class="bg-gray-950 shadow-lg py-8 px-8 md:px-16 flex justify-center items-center rounded-b-2xl">
+        <div class="flex items-center">
+            <svg class="w-10 h-10 text-yellow-400 mr-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l3 3a1 1 0 001.414-1.414L11 9.586V6z" clip-rule="evenodd"></path>
+            </svg>
+            <h1 class="text-4xl md:text-5xl font-bold text-gradient-gold-amber">Best Laptops to Buy in 2025</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-8 md:p-16">
+
+        <section class="mb-20 text-center">
+            <p class="text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed">
+                Navigating the vast laptop market can be a challenge. We've compiled a meticulously curated list of the best laptops to consider in 2025, categorized by price range and purpose, to help you make an informed decision. Hover over each section to reveal detailed specifications!
+            </p>
+        </section>
+
+        <div id="laptop-sections-container" class="flex flex-col items-center"></div>
+
+    </main>
+
+    <footer class="bg-gray-950 py-10 px-8 md:px-16 mt-16 rounded-t-2xl">
+        <div class="container mx-auto text-center text-gray-400">
+            <p class="text-base">&copy; 2025 Laptop Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const laptopsData = [
+            // Under ₹40,000
+            {
+                model: "Honor MagicBook",
+                price_range: "Under ₹40,000",
+                category: "Budget-Friendly",
+                features: ["Aluminum build", "Slim design", "16-inch Full HD+ display", "Intel i5 12450H processor", "16GB RAM", "512GB SSD"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Honor+MagicBook"
+            },
+
+            // Around ₹50,000 - ₹55,000
+            {
+                model: "Asus VivoBook 15",
+                price_range: "Around ₹50,000 - ₹55,000",
+                category: "Thin & Light / General Use",
+                features: ["Thin and light design", "H-series processor (suitable for gaming and everyday tasks)", "180° hinge", "Lightweight (1.7 kg)", "15.6-inch Full HD display", "Intel i5 12th generation processor", "8GB RAM", "512GB SSD", "Price: ₹46,990"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Asus+VivoBook+15"
+            },
+            {
+                model: "Asus VivoBook OLED",
+                price_range: "Around ₹50,000 - ₹55,000",
+                category: "Display Quality Focus",
+                features: ["15.6-inch OLED display", "Thin and light design", "Suitable for everyday use", "Ryzen 5 7520U processor", "16GB RAM", "512GB SSD", "Price: ₹48,990"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Asus+VivoBook+OLED"
+            },
+            {
+                model: "HP Victus",
+                price_range: "Around ₹50,000 - ₹55,000",
+                category: "Gaming Series",
+                features: ["Popular gaming series from HP", "Focus on GPU performance (RTX 3050)", "16.1-inch anti-glare IPS display", "Ryzen 5600H processor", "8GB RAM (expandable)", "512GB SSD", "Price: ₹55,890"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=HP+Victus"
+            },
+            {
+                model: "Acer Aspire 7",
+                price_range: "Around ₹50,000 - ₹55,000",
+                category: "Entry-Level Gaming",
+                features: ["Balanced performance", "Metal top lid", "15.6-inch Full HD 144Hz display", "Thunderbolt 4 port", "Intel i5 1240H processor", "RTX 2050", "8GB RAM", "512GB SSD", "Price: ₹54,990"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Acer+Aspire+7"
+            },
+            {
+                model: "Asus TUF A15",
+                price_range: "Around ₹50,000 - ₹55,000",
+                category: "Gaming Laptop",
+                features: ["Military-grade toughness", "RGB keyboard", "15.6-inch Full HD 144Hz display", "Ryzen 5 7535HS processor", "RTX 3050", "16GB RAM", "512GB SSD", "Price: ₹52,990"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Asus+TUF+A15"
+            },
+            {
+                model: "ASUS Vivobook 15X",
+                price_range: "Around ₹50,000 - ₹55,000",
+                category: "Thin & Light / General Use",
+                features: ["15.6-inch FHD screen", "180° hinge", "16GB RAM", "512GB storage", "13th Gen Core i5 processor", "Military-grade standard (MIL-STD-810H)", "Price: ₹54,999"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Asus+Vivobook+15X"
+            },
+            {
+                model: "ASUS TUF Gaming A15",
+                price_range: "Around ₹50,000 - ₹55,000",
+                category: "Performance Gaming",
+                features: ["16GB RAM", "512GB storage", "Military-grade standard (MIL-STD-810H)", "Price: ₹57,999"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Asus+TUF+Gaming+A15"
+            },
+
+            // Around ₹60,000 - ₹65,000
+            {
+                model: "MSI Modern 15",
+                price_range: "Around ₹60,000 - ₹65,000",
+                category: "AI-Ready / General Use",
+                features: ["Intel Ultra 7 processor (with NPU for AI)", "16GB RAM (expandable to 64GB)", "512GB SSD (expandable)", "15.7-inch Full HD IPS display", "Price: ₹64,000"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=MSI+Modern+15"
+            },
+            {
+                model: "HP Pavilion 16",
+                price_range: "Around ₹60,000 - ₹65,000",
+                category: "Premium / AI-Ready",
+                features: ["Intel Ultra 5 processor (with NPU for AI)", "16GB RAM", "512GB SSD", "16-inch Full HD+ IPS display", "Recommended for investments above ₹60,000"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=HP+Pavilion+16"
+            },
+            {
+                model: "Acer Nitro V 15",
+                price_range: "Around ₹60,000 - ₹65,000",
+                category: "Performance Gaming",
+                features: ["15.6-inch FHD screen with 144Hz refresh rate", "16GB RAM", "512GB storage", "13th Gen Core i5 processor", "RTX 3050 graphics card", "Price: ₹62,999 (often available under ₹60,000 with offers)"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Acer+Nitro+V+15"
+            },
+            {
+                model: "Lenovo LOQ 15",
+                price_range: "Around ₹60,000 - ₹65,000",
+                category: "Performance Gaming",
+                features: ["AMD 7000 series processor", "RTX 3050 graphics", "Decent audio quality", "Price: ₹63,000"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Lenovo+LOQ+15"
+            },
+
+            // Around ₹75,000 - ₹85,000
+            {
+                model: "Acer Swift Go 14",
+                price_range: "Around ₹75,000 - ₹85,000",
+                category: "Premium / AI-Ready / Portable",
+                features: ["Touchscreen display", "Two Thunderbolt 4 ports", "Wi-Fi 7", "Intel Ultra processor (with NPU for AI)", "Price: ₹75,000"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Acer+Swift+Go+14"
+            },
+            {
+                model: "Lenovo Yoga Slim 7 OLED",
+                price_range: "Around ₹75,000 - ₹85,000",
+                category: "Premium / OLED Display",
+                features: ["OLED display", "16GB RAM", "512GB SSD", "Intel Ultra processor (with NPU for AI)", "Price: ₹82,000"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Lenovo+Yoga+Slim+7+OLED"
+            },
+
+            // ₹100,000 - ₹110,000
+            {
+                model: "Lenovo Ideapad Pro 5 OLED",
+                price_range: "₹100,000 - ₹110,000",
+                category: "High-End / Flagship",
+                features: ["Intel Ultra 9 processor (with NPU for AI)", "32GB RAM", "1TB SSD", "2.8K resolution OLED display", "Intel EVO certified (Thunderbolt 4, fast boot, long battery)", "Price: ₹100,000 - ₹110,000"],
+                image: "https://placehold.co/600x350/1A1A1A/FFFFFF?text=Lenovo+Ideapad+Pro+5+OLED"
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const laptopSectionsContainer = document.getElementById('laptop-sections-container');
+            
+            // Define categories in desired display order
+            const categories = [
+                "Under ₹40,000",
+                "Around ₹50,000 - ₹55,000",
+                "Around ₹60,000 - ₹65,000",
+                "Around ₹75,000 - ₹85,000",
+                "₹100,000 - ₹110,000"
+            ];
+
+            // Function to create a laptop section HTML
+            function createLaptopSection(laptop) {
+                const featuresList = laptop.features.map(feature => `<li class="text-gray-300 text-xl">${feature}</li>`).join('');
+                return `
+                    <section class="laptop-section">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+                            <img src="${laptop.image}" alt="${laptop.model}" class="laptop-image">
+                            <div class="flex-grow text-center md:text-left">
+                                <h4 class="text-5xl font-bold text-gradient-gold-amber mb-4">${laptop.model}</h4>
+                                <p class="text-2xl text-gray-300 mb-8">Price Range: ${laptop.price_range}</p>
+                                <p class="text-xl text-gray-400">Category: ${laptop.category}</p>
+                            </div>
+                        </div>
+                        <div class="laptop-details mt-10">
+                            <h5 class="text-3xl font-semibold text-blue-400 mb-6">Key Highlights:</h5>
+                            <ul class="list-disc list-inside space-y-4">
+                                ${featuresList}
+                            </ul>
+                        </div>
+                    </section>
+                `;
+            }
+
+            categories.forEach(category => {
+                // Add a category heading
+                const categoryHeading = document.createElement('h3');
+                categoryHeading.className = 'text-4xl md:text-5xl font-bold text-gradient-gold-amber mb-12 mt-16 text-center'; // Larger, gold, centered
+                categoryHeading.textContent = category;
+                laptopSectionsContainer.appendChild(categoryHeading);
+
+                // Filter and add laptops for this category
+                const laptopsInCategory = laptopsData.filter(laptop => laptop.price_range === category);
+                laptopsInCategory.forEach(laptop => {
+                    laptopSectionsContainer.innerHTML += createLaptopSection(laptop);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
